@@ -29,29 +29,11 @@
         })
         .catch(console.error);
     }
-    if ('0.1.90' === 'dev') {
-      window.cdnRoot = ''; // 测试环境，不启用cdn
-    } else if (/^v\d+\.wiz\.cn$/ig.test(window.location.host)) {
-      window.cdnRoot = ''; // v3,v4
-    } else {
-      window.cdnRoot = window.location.host.indexOf('wiz.cn') === -1 ? '' : '//wcdn.wiz.cn'; // 只有wiz官网才可以使用cdn，docker用户无法使用
-    }</script>
+    window.cdnRoot = '';
+</script>
   <script src=/xapp/live-editor/index.js></script>
-  <script>if ('0.1.90' !== 'dev') {
-      !(function (c, b, d, a) {
-        c[a] || (c[a] = {});
-        c[a].config = {
-          pid: 'exuqplfxuv@08ce6bdf348ace5',
-          appType: 'web',
-          imgUrl: 'https://arms-retcode.aliyuncs.com/r.png?',
-          behavior: true,
-          enableConsole: true,
-          release: '0.1.90',
-        };
-        with (b) with (body) with (insertBefore(createElement('script'), firstChild)) setAttribute('crossorigin', '', (src = d));
-      })(window, document, 'https://retcode.alicdn.com/retcode/bl.js', '__bl');
-    }</script>
-  <div id=root></div>
+  <div id=root>
+  </div>
 </body>
 
 </html>
